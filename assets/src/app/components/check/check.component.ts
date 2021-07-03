@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-check',
@@ -10,8 +10,15 @@ export class CheckComponent implements OnInit {
   mainViwe: boolean = true;
   kem: boolean = false;
   kemMe: any = 1;
+  user:any = {}
   ngOnInit(): void {
     this.mainViwe;
+    this.user.sex = "นาย";
+    this.user.name = "สุริยา พุฒดวง"
+    this.user.company = "Sinovac"
+    this.user.vccLot = "1/2564"
+    this.user.serialNo = "SNV-000001"
+    this.user.vccDate = "1 กรกฎาคม 2564"
   }
 
   openKem1 = () => {

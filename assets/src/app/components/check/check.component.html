@@ -1,17 +1,30 @@
+<!-- หน้าเมนูประเมินอาการ -->
 <div *ngIf="mainViwe" class="main container-fluid d-flex justify-content-center align-items-start"
     style="height: 100vh; width: 100vw">
     <div class="row">
         <div class="col-12 d-flex justify-content-center">
-            <img src="assets/img/logo.png" class="img-fluid" style="padding-bottom: 20vh; padding-top: 2vh; width: 60vw"
+            <img src="assets/img/logo.png" class="img-fluid" style="padding-bottom: 2vh; padding-top: 2vh; width: 60vw"
                 alt="Responsive image" />
         </div>
+        <div class="col-12  d-flex justify-content-start " style="height: 100%; margin-bottom: 20px;">
+            <div class="bg-white rounded" style="width: 80vw; margin: 0px auto; padding: 2px 5px;">
+                <div>
+                    <p style="padding: 0px; margin: 0px;">{{user.sex}} {{user.name}}</p>
+                    <p style="padding: 0px; margin: 0px;">วัคซีนโควิด 19 เข็มที่ 1 </p>
+                    <p style="padding: 0px; margin: 0px;">บริษัทผู้ผลิต {{user.company}}</p>
+                    <p style="padding: 0px; margin: 0px;">Lot ที่นำเข้า {{user.vccLot}}</p>
+                    <p style="padding: 0px; margin: 0px;">Serial no. {{user.serialNo}}</p>
+                    <p style="padding: 0px; margin: 0px;">รับเมื่อวันที่ {{user.vccDate}}</p>
+                </div>
+            </div>
+        </div>
         <div class="col-12 mb-4 d-flex justify-content-center">
-            <button type="button" (click) = "openKem1()" class="btn btn-info btn-lg rounded-pill" style="width: 80vw;">
+            <button type="button" (click)="openKem1()" class="btn btn-info btn-lg rounded-pill" style="width: 80vw;">
                 ประเมินอาการเข็มที่ 1
             </button>
         </div>
-        <div class="col-12 mb-5 d-flex justify-content-center" >
-            <button type="button" (click) = "openKem2()" class="btn btn-info btn-lg rounded-pill" style="width: 80vw;">
+        <div class="col-12 mb-5 d-flex justify-content-center">
+            <button type="button" (click)="openKem2()" class="btn btn-info btn-lg rounded-pill" style="width: 80vw;">
                 ประเมินอาการเข็มที่ 2
             </button>
         </div>
@@ -33,11 +46,13 @@
         <div class="row d-flex justify-content-start" style="margin: auto">
             <div class="col-12">
                 <p class="" style="margin: 0px">
-                    <span class="badge badge-success" style="font-size: 18px; font-weight: lighter;">ประวัติการประเมิน</span>
+                    <span class="badge badge-success"
+                        style="font-size: 18px; font-weight: lighter;">ประวัติการประเมิน</span>
                 </p>
             </div>
             <div class="col-12">
-                <p class="" style="margin: 5px 0px 0px 0px; font-weight: bold; font-size: 18px;">วัคซีนโควิด 19 เข็ม {{kemMe}}</p>
+                <p class="" style="margin: 5px 0px 0px 0px; font-weight: bold; font-size: 18px;">วัคซีนโควิด 19 เข็ม
+                    {{kemMe}}</p>
             </div>
             <div class="col-12">
                 <p class="" style="margin: 0px">รอบการประเมินหลังจาก 7 วัน</p>
@@ -119,11 +134,12 @@
                             <textarea class="form-control" name="" id="" rows="3" style="margin: 0px"></textarea>
                         </div>
                     </div>
-                     <div class="col-12 d-flex justify-content-center" style="padding-bottom: 2vh;">
-                         <button type="button" (click) = "backMain()" class="btn btn-success" style="margin: 0px 10px;">บันทึก</button>
-                         <button type="button" (click) = "backMainCancel()" class="btn btn-danger">ยกเลิก</button>
-                     </div>
-                    
+                    <div class="col-12 d-flex justify-content-center" style="padding-bottom: 2vh;">
+                        <button type="button" (click)="backMain()" class="btn btn-success"
+                            style="margin: 0px 10px;">บันทึก</button>
+                        <button type="button" (click)="backMainCancel()" class="btn btn-danger">ยกเลิก</button>
+                    </div>
+
                 </div>
             </div>
         </div>
