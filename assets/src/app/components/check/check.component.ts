@@ -7,6 +7,7 @@ import { Component, OnInit, Output } from '@angular/core';
 })
 export class CheckComponent implements OnInit {
   constructor() {}
+  dataView:boolean = false
   mainViwe: boolean = true;
   kem: boolean = false;
   kemMe: any = 1;

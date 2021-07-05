@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { CheckComponent } from './components/check/check.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './components/home/home.component';
+import { Lab1Component } from './test/lab1/lab1.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
     AppComponent,
     CheckComponent,
-    HomeComponent
+    HomeComponent,
+    Lab1Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
